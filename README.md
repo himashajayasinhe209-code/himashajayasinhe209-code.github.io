@@ -29,7 +29,8 @@ This is a professional, responsive, and "supiri" (superb) personal portfolio web
   - `js/script.js` - JavaScript for interactivity
 
 ## Contact Details Included
-- **WhatsApp:** 070 349 2008
+- **WhatsApp:** 070 349 2908
 - **Email:** himashajayasinhe209@gmail.com
 
 Enjoy your new website!
+
