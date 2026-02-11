@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himasha Jayasinhe - Web Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js" defer></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3F8EF6', // Bright Blue
+                        secondary: '#8B5CF6', // Purple
+                        dark: '#0F172A', // Slate 900
+                        darker: '#020617', // Slate 950
+                        accent: '#2DD4BF', // Teal
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glassframe {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3F8EF6, #8B5CF6, #2DD4BF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-white antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 transition-all duration-300" id="navbar">
+        <div class="glassframe border-b border-white/5 no-border-mobile">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0 reveal">
+                        <a href="index.html"
+                            class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400 hover:from-primary hover:to-accent transition-all duration-300">
+                            Himasha<span class="text-primary">.dev</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8 reveal delay-100">
+                            <a href="index.html"
+                                class="text-primary font-medium px-3 py-2 rounded-md transition-colors border-b-2 border-primary">Home</a>
+                            <a href="about.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">About
+                                Me</a>
+                            <a href="services.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">Services</a>
+                            <a href="portfolio.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">Portfolio</a>
+                            <a href="contact.html"
+                                class="bg-primary hover:bg-blue-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 transform hover:-translate-y-0.5">Contact
+                                Me</a>
+                        </div>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                            aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="hidden md:hidden bg-darker border-t border-white/5 absolute w-full left-0 glassframe"
+                id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-white/5">Home</a>
+                    <a href="about.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 transition-colors">About
+                        Me</a>
+                    <a href="services.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 transition-colors">Services</a>
+                    <a href="portfolio.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 transition-colors">Portfolio</a>
+                    <a href="contact.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 transition-colors">Contact
+                        Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Effects -->
+        <div
+            class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-10 blur-sm">
+        </div>
+        <div class="absolute inset-0 bg-darker/80"></div>
+
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob">
+            </div>
+            <div
+                class="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-4000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center relative z-10 w-full">
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 pt-10 md:pt-0 reveal">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full glassframe text-sm font-medium text-accent mb-6 border border-accent/20 shadow-lg shadow-accent/10 hover:shadow-accent/20 transition-all cursor-default">
+                    Hello, I'm Himasha Jayasinhe 👋
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6 text-white drop-shadow-2xl">
+                    Building <span class="text-gradient">Digital Experiences</span> That Matter.
+                </h1>
+                <p class="text-lg text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed font-light">
+                    I am a passionate <strong class="text-white font-medium">Web Developer</strong> and <strong
+                        class="text-white font-medium">Graphic Designer</strong> based in Sri Lanka. I specialize in
+                    building stunning websites and crafting unique brand identities using modern technologies.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="contact.html"
+                        class="px-8 py-4 bg-primary hover:bg-blue-600 rounded-full font-bold text-white transition-all shadow-lg shadow-primary/25 hover:shadow-primary/50 transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                        Let's Talk
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="portfolio.html"
+                        class="px-8 py-4 glassframe hover:bg-white/10 rounded-full font-bold text-white transition-all border border-white/10 flex items-center justify-center hover:border-white/30 backdrop-blur-md">
+                        View Work
+                    </a>
+                </div>
+
+                <div
+                    class="mt-12 flex items-center justify-center md:justify-start gap-8 text-gray-500 text-sm font-medium uppercase tracking-wider">
+                    <div class="flex items-center gap-2 hover:text-primary transition-colors cursor-default">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-secondary transition-colors cursor-default">
+                        <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <span>Graphic Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative mt-16 md:mt-0 reveal delay-200">
+                <!-- Image Placeholder Area -->
+                <div class="relative w-full aspect-square max-w-md mx-auto perspective-1000">
+                    <!-- Decorative elements -->
+                    <div
+                        class="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary to-secondary rounded-full opacity-40 blur-[60px] animate-pulse">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-48 h-48 bg-accent rounded-full opacity-30 blur-[80px] animate-pulse animation-delay-2000">
+                    </div>
+
+                    <!-- Main Image container -->
+                    <div
+                        class="relative w-full h-full glassframe rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20 transform hover:scale-[1.02] hover:rotate-1 transition-all duration-700 ease-out group">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop"
+                            alt="Himasha Jayasinhe"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darker via-transparent to-transparent opacity-80">
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span
+                                    class="bg-primary/20 text-primary border border-primary/20 text-xs font-bold px-2 py-1 rounded">DEVELOPS</span>
+                                <span
+                                    class="bg-secondary/20 text-secondary border border-secondary/20 text-xs font-bold px-2 py-1 rounded">DESIGNS</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">Himasha
+                                Jayasinhe</h3>
+                            <p class="text-sm text-gray-400 mt-1">Full Stack Developer Node.js & React</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating badges -->
+                    <div
+                        class="absolute top-10 -left-8 glassframe px-5 py-3 rounded-xl border border-white/10 flex items-center gap-3 shadow-xl animate-[bounce_3s_infinite] backdrop-blur-xl bg-darker/60 z-20">
+                        <div class="relative">
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div class="absolute inset-0 w-3 h-3 rounded-full bg-green-500 animate-ping opacity-75">
+                            </div>
+                        </div>
+                        <span class="text-sm font-bold text-white">Open to Work</span>
+                    </div>
+
+                    <div
+                        class="absolute bottom-20 -right-6 glassframe px-5 py-3 rounded-xl border border-white/10 flex items-center gap-3 shadow-xl animate-[bounce_4s_infinite] animation-delay-1000 backdrop-blur-xl bg-darker/60 z-20">
+                        <span class="text-2xl">🚀</span>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-400 font-medium uppercase tracking-wide">Experience</span>
+                            <span class="text-sm font-bold text-white">3+ Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills/Services Preview -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">What I Do</span>
+                <h2 class="mt-3 text-4xl md:text-5xl font-bold text-white">Expertise & Services</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 reveal delay-100">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/10">
+                        <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Web
+                        Development</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Custom websites built with HTML, CSS, JavaScript, and
+                        Tailwind. High performance, SEO optimized, and fully responsive designs.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 reveal delay-200">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-secondary/10">
+                        <svg class="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">Graphic
+                        Design</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Professional designs using Photoshop. Logos, branding,
+                        posters, and social media content creation that stands out.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-accent/50 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 reveal delay-300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-accent/10">
+                        <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors">WordPress
+                        Solutions</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">Easy to manage websites using WordPress. Custom
+                        themes, plugin integration, and performance optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-12 relative">
+        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="text-2xl font-bold text-white tracking-tight">Himasha<span
+                            class="text-primary">.dev</span></span>
+                    <p class="text-gray-500 mt-2 text-sm max-w-xs">Building the web of tomorrow, pixel by pixel. Let's
+                        create something extraordinary.</p>
+                </div>
+                <div class="flex space-x-6 text-gray-400">
+                    <a href="#" class="hover:text-primary transition-colors transform hover:scale-110">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/94703492008"
+                        class="hover:text-green-500 transition-colors transform hover:scale-110">
+                        <span class="sr-only">WhatsApp</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/5 mt-8 pt-8 text-center text-gray-600 text-sm">
+                &copy; 2024 Himasha Jayasinhe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Himasha Jayasinhe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js" defer></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3F8EF6',
+                        secondary: '#8B5CF6',
+                        dark: '#0F172A',
+                        darker: '#020617',
+                        accent: '#2DD4BF',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glassframe {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 transition-all duration-300 shadow-lg" id="navbar">
+        <div class="glassframe border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-2xl font-bold tracking-tight">Himasha<span
+                                class="text-primary">.dev</span></a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="index.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">Home</a>
+                            <a href="about.html"
+                                class="text-primary font-medium px-3 py-2 rounded-md transition-colors border-b-2 border-primary">About
+                                Me</a>
+                            <a href="services.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">Services</a>
+                            <a href="portfolio.html"
+                                class="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-colors">Portfolio</a>
+                            <a href="contact.html"
+                                class="bg-primary hover:bg-blue-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 transform hover:-translate-y-0.5">Contact
+                                Me</a>
+                        </div>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                            id="mobile-menu-btn">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="hidden md:hidden bg-darker border-t border-white/5 absolute w-full left-0 glassframe"
+                id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                    <a href="about.html"
+                        class="text-primary block px-3 py-2 rounded-md text-base font-medium bg-white/5">About Me</a>
+                    <a href="services.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                    <a href="portfolio.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                    <a href="contact.html"
+                        class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact
+                        Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <!-- Image Column -->
+                <div class="w-full md:w-1/2 reveal">
+                    <div class="relative rounded-2xl overflow-hidden glassframe border border-white/10 p-2 group">
+                        <div
+                            class="absolute inset-0 bg-primary/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop"
+                            alt="Himasha Jayasinhe"
+                            class="w-full h-auto rounded-xl object-cover grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105">
+
+                        <!-- Decorative square -->
+                        <div
+                            class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full filter blur-3xl opacity-40 -z-10">
+                        </div>
+                        <div
+                            class="absolute -top-6 -left-6 w-32 h-32 bg-primary rounded-full filter blur-3xl opacity-40 -z-10">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="w-full md:w-1/2 reveal delay-200">
+                    <span class="text-primary font-bold tracking-widest text-sm uppercase mb-2 block">About Me</span>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Driven by Design, <br><span
+                            class="text-white/50">Powered by Code.</span></h1>
+
+                    <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
+                        <p>
+                            Hello! I'm <strong class="text-white">Himasha Jayasinhe</strong>, a passionate Web Developer
+                            and Graphic Designer based in Sri Lanka. My journey in the digital world began with a
+                            curiosity for how things work on the internet, which quickly evolved into a dedicated career
+                            in building beautiful, functional websites.
+                        </p>
+                        <p>
+                            With a strong foundation in <strong class="text-white">HTML, CSS, JavaScript, and Tailwind
+                                CSS</strong>, I create responsive and performant web applications. I specifically focus
+                            on clean, efficient frontend solutions that deliver exceptional user experiences.
+                        </p>
+                        <p>
+                            Beyond coding, I have a keen eye for aesthetics. My skills in <strong
+                                class="text-white">Photoshop</strong> allow me to bridge the gap between design and
+                            development, ensuring that every pixel is perfect. I also specialize in <strong
+                                class="text-white">WordPress</strong>, helping clients manage their content with ease.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div
+                            class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors group">
+                            <span
+                                class="block text-4xl font-bold text-primary mb-1 group-hover:scale-110 transition-transform origin-left">3+</span>
+                            <span class="text-sm text-gray-400 font-medium uppercase tracking-wider">Years
+                                Experience</span>
+                        </div>
+                        <div
+                            class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-colors group">
+                            <span
+                                class="block text-4xl font-bold text-accent mb-1 group-hover:scale-110 transition-transform origin-left">50+</span>
+                            <span class="text-sm text-gray-400 font-medium uppercase tracking-wider">Projects
+                                Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="mt-32 reveal delay-300">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">My Tech Stack</h2>
+                    <p class="text-gray-400">The tools and technologies I use to bring ideas to life.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Skill Items -->
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🌐</span>
+                        <h3 class="font-bold text-lg group-hover:text-primary transition-colors">HTML5</h3>
+                    </div>
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🎨</span>
+                        <h3 class="font-bold text-lg group-hover:text-blue-400 transition-colors">CSS3</h3>
+                    </div>
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">⚡</span>
+                        <h3 class="font-bold text-lg group-hover:text-cyan-400 transition-colors">Tailwind</h3>
+                    </div>
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">📜</span>
+                        <h3 class="font-bold text-lg group-hover:text-yellow-400 transition-colors">JavaScript</h3>
+                    </div>
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🖌️</span>
+                        <h3 class="font-bold text-lg group-hover:text-blue-600 transition-colors">Photoshop</h3>
+                    </div>
+                    <div
+                        class="p-6 glassframe rounded-2xl border border-white/5 flex flex-col items-center justify-center hover:-translate-y-2 transition-transform duration-300 hover:bg-white/5 group lg:col-start-3">
+                        <span
+                            class="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">📝</span>
+                        <h3 class="font-bold text-lg group-hover:text-blue-500 transition-colors">WordPress</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <span class="text-2xl font-bold text-white">Himasha<span class="text-primary">.dev</span></span>
+            <div class="border-t border-white/5 mt-8 pt-8 text-gray-600 text-sm">
+                &copy; 2024 Himasha Jayasinhe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
