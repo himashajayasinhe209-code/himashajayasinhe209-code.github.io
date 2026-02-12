@@ -33,4 +33,3 @@ This is a professional, responsive, and "supiri" (superb) personal portfolio web
 - **Email:** himashajayasinhe209@gmail.com
 
 Enjoy your new website!
-
